@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+message Text {
+    string data = 1;
+}
+
+service DataHash {
+    rpc hash_md5(Text) returns (Text) {};
+    rpc hash_sha256(Text) returns (Text) {};
+}
